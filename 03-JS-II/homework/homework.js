@@ -137,7 +137,9 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero<2) return false;  
   if(numero===2) return true;
-  for(var i=2;i<numero;i++){if(numero%1===0){return false}}
+  for(var i=2;i<numero;i++)
+  {if(numero%i===0){return false;}}
+  return true;
  
 }
 
@@ -171,10 +173,12 @@ function doWhile(numero) {
   //Usar el bucle do ... while.
   var a = numero;
   var i = 0;
-  do {i=i+1;a=a+5;}
-  while(1<8);
-  return a
-  
+  do {
+    i = i + 1;
+    a = a + 5;
+  }
+  while(i < 8);
+  return a;
 }
 
 
